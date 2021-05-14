@@ -37,13 +37,8 @@ int Driver()
    
     strcat(nome, ".txt"); 
     strcat(FileWithPath,nome);
-    printf("Arquivo: %s",FileWithPath);
     tipoTexto = lerTexto(FileWithPath); //converte o texto para caracteres
-
-    //padrão a ser pesquisado
-
-    //avalia qual método vai ser usado
-    switch (op)
+ switch (op)
     {
     case 1:
     { //força bruta
@@ -143,7 +138,7 @@ int Driver()
                 printf("\n   ||                                                                                          ||");
                 printf("\n   ||  Metodo de casamento exato de cadeias: Shift-And                                         ||");
                 printf("\n   ||  Distancia de edicao: %ld                                                              ||",k); 
-                printf("\n   ||  Numero de casamentos encontrados varrendo todo o texto: %ld                             ||", Match); 
+                printf("\n   ||  Numero de casamentos encontrados varrendo todo o texto: %ld                           ||", Match); 
                 printf("\n   ||  Tempo de execucao do Forca Bruta: %.3f segundos.                                       ||", tempo);
                 printf("\n   ||                                                                                          ||");
                 printf("\n    ============================================================================================\n\n");
