@@ -1,7 +1,7 @@
 #include "ShiftAndAP.h"
 
 
-int ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k){  
+int ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k, short op){  
     long match = 0; 
     long  Mask[MAXCHAR], i , j , Ri, Rant, Rnew;  
     long R[MAXCHAR + 1];  
@@ -18,8 +18,17 @@ int ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k){
         Rant = R[0]; 
         Rnew= ((((unsigned long) Rant) >> 1)| Ri ) &Mask[Text[i] + 127]; 
         R[0] = Rnew;   
-        for(j = 1; j <= k ; j++){ 
-            Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | Rant | (((unsigned long)(Rant| Rnew)) >> 1);  
+        for(j = 1; j <= k ; j++){  
+            if(op == 1) 
+                //insercao
+                Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | Rant ;  
+            else if(op == 2)  
+                //remocao
+                Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | (((unsigned long)Rant) >> 1);  
+            else if(op == 3) 
+                // substituicao  
+                Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | (((unsigned long)Rnew) >> 1);
+
             Rant = R[j];
             R[j] = Rnew | Ri; 
         } 

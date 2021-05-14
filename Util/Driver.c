@@ -15,7 +15,7 @@ int Driver()
     long comp = 0, desloc = 0, k = 0 ; 
     char FileWithPath[50] = "../StringMatching-/Data/";  
     long Match = 0; 
-    short flag; 
+    short flag, opSA; 
 
     // if(argc<4 || argc>5){
     //     printf("\nFormato de entrada via linha de comando invalido!\n");
@@ -111,9 +111,12 @@ int Driver()
     { 
          inicio = clock();
         printf("\nShift-And:\n");  
-        printf("\n\n    * Entre com o valor da distância de edicao: "); 
+        printf("\n\n    * Entre com o valor da distância de edicao: ");   
         scanf("%ld",&k); 
-        Match = ShiftAndAP(tipoTexto, tipoPadrao, strlen(tipoTexto), strlen(tipoPadrao), k);
+        printf("\n\n    * Entre com (1) para insercao ou (2) para Remocao ou (3) para Substituição: "); 
+        scanf("%hd",&opSA); 
+        
+        Match = ShiftAndAP(tipoTexto, tipoPadrao, strlen(tipoTexto), strlen(tipoPadrao), k,opSA);
         if (Match <= 0)
         {
             printf("\nPadrao nao encontrado\n");
