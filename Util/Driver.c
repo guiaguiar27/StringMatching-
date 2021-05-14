@@ -28,7 +28,7 @@ int Driver()
     printf("\n\n    * Entre com o nome do arquivo de texto a ser analisado (sem .txt): ");
     scanf("%s", nome);
 
-    //strcat("../Data/", nome);
+    strcat("/Data/", nome);
     strcat(nome, ".txt"); 
     printf("Arquivo: %s",nome);
     tipoTexto = lerTexto(nome); //converte o texto para caracteres
