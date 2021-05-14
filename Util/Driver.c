@@ -13,7 +13,8 @@ int Driver()
     int op;
     char nome[20];
     long comp = 0, desloc = 0, k = 0 ; 
-    char FileWithPath[50] = "../StringMatching-/Data/"; 
+    char FileWithPath[50] = "../StringMatching-/Data/";  
+    long Match = 0; 
     short flag; 
 
     // if(argc<4 || argc>5){
@@ -47,8 +48,9 @@ int Driver()
     case 1:
     { //força bruta
         inicio = clock();
-        printf("\nMetodo Forca Bruta:\n");
-        if (!ForcaBruta(tipoTexto, strlen(tipoTexto), tipoPadrao, strlen(tipoPadrao), &comp, &desloc))
+        printf("\nMetodo Forca Bruta:\n"); 
+        Match = ForcaBruta(tipoTexto, strlen(tipoTexto), tipoPadrao, strlen(tipoPadrao), &comp, &desloc);
+        if (Match <= 0)
         {
             printf("\nPadrao nao encontrado\n");
         }
@@ -56,7 +58,7 @@ int Driver()
         fim = clock();
         total = fim - inicio;
         tempo = ((double)total) / CLOCKS_PER_SEC;
-        if (tipoPadrao != NULL)
+        if (tipoPadrao != NULL && Match > 0)
         {
             if (flag ==1 )
             {
@@ -64,7 +66,8 @@ int Driver()
                 printf("\n   ||                                                                                          ||");
                 printf("\n   ||  Metodo de casamento exato de cadeias: Forca Bruta                                       ||");
                 printf("\n   ||  Comparacoes entre os caracteres do texto e do padrao: %-7ld                           ||", comp);
-                printf("\n   ||  Deslocamentos realizados na varredura de todo o texto: %-7ld                          ||", desloc);
+                printf("\n   ||  Deslocamentos realizados na varredura de todo o texto: %-7ld                          ||", desloc); 
+                printf("\n   ||  Numero de casamentos encontrados varrendo todo o texto: %ld                           ||", Match); 
                 printf("\n   ||  Tempo de execucao do Forca Bruta: %.3f segundos.                                       ||", tempo);
                 printf("\n   ||                                                                                          ||");
                 printf("\n    ============================================================================================\n\n");
@@ -75,8 +78,10 @@ int Driver()
     case 2:
     { //BMH 
         inicio = clock();
-        printf("\nBMH:\n");
-        if (!BMH(tipoTexto, tipoPadrao, strlen(tipoTexto), strlen(tipoPadrao), &comp, &desloc))
+        printf("\nBMH:\n");  
+        
+        Match = BMH(tipoTexto, tipoPadrao, strlen(tipoTexto), strlen(tipoPadrao), &comp, &desloc); 
+        if (Match <= 0)
         {
             printf("\nPadrao nao encontrado\n");
         }
@@ -84,20 +89,22 @@ int Driver()
         fim = clock();
         total = fim - inicio;
         tempo = ((double)total) / CLOCKS_PER_SEC;
-        if (tipoPadrao != NULL)
+        if (tipoPadrao != NULL && Match > 0)
         {
-            if (flag ==1 )
+            if (flag == 1)
             {
                 printf("\n\n    =========================================RESULTADOS=========================================");
                 printf("\n   ||                                                                                          ||");
                 printf("\n   ||  Metodo de casamento exato de cadeias: BMH                                               ||");
-                printf("\n   ||  Comparacoes entre os caracteres do texto e do padrao: %-7ld                           ||", comp);
-                printf("\n   ||  Deslocamentos realizados na varredura de todo o texto: %-7ld                          ||", desloc);
-                printf("\n   ||  Tempo de execucao do Forca Bruta: %.3f segundos.                                       ||", tempo);
+                printf("\n   ||  Comparacoes entre os caracteres do texto e do padrao: %-7ld                           ||", comp); 
+                printf("\n   ||  Deslocamentos realizados na varredura de todo o texto: %-7ld                          ||", desloc);  
+                printf("\n   ||  Numero de casamentos encontrados varrendo todo o texto: %ld                           ||", Match); 
+                printf("\n   ||  Tempo de execucao do Forca Bruta: %.3f segundos.                                       ||", tempo); 
                 printf("\n   ||                                                                                          ||");
                 printf("\n    ============================================================================================\n\n");
             }
-        }
+        } 
+        Match = 0 ; 
         break;
         } 
     case 3: 
@@ -106,7 +113,8 @@ int Driver()
         printf("\nShift-And:\n");  
         printf("\n\n    * Entre com o valor da distância de edicao: "); 
         scanf("%ld",&k); 
-        if (!ShiftAndAP(tipoTexto, tipoPadrao, strlen(tipoTexto), strlen(tipoPadrao), k))
+        Match = ShiftAndAP(tipoTexto, tipoPadrao, strlen(tipoTexto), strlen(tipoPadrao), k);
+        if (Match <= 0)
         {
             printf("\nPadrao nao encontrado\n");
         }
@@ -114,7 +122,7 @@ int Driver()
         fim = clock();
         total = fim - inicio;
         tempo = ((double)total) / CLOCKS_PER_SEC;
-        if (tipoPadrao != NULL)
+        if (tipoPadrao != NULL && Match > 0)
         {
             if (flag ==1 )
             {
@@ -122,7 +130,8 @@ int Driver()
                 printf("\n   ||                                                                                          ||");
                 printf("\n   ||  Metodo de casamento exato de cadeias: Shift-And                                         ||");
                 printf("\n   ||  Distancia de edicao: %ld                                                              ||",k);
-                printf("\n   ||  Deslocamentos realizados na varredura de todo o texto: %-7ld                          ||", desloc);
+                printf("\n   ||  Deslocamentos realizados na varredura de todo o texto: %-7ld                           ||", desloc); 
+                printf("\n   ||  Numero de casamentos encontrados varrendo todo o texto: %ld                             ||", Match); 
                 printf("\n   ||  Tempo de execucao do Forca Bruta: %.3f segundos.                                       ||", tempo);
                 printf("\n   ||                                                                                          ||");
                 printf("\n    ============================================================================================\n\n");

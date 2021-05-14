@@ -19,7 +19,7 @@ int ForcaBruta(TipoTexto texto, long tamTexto, TipoPadrao padrao, long tamPadrao
         if (j > tamPadrao)
         {
             printf(" - - Casamento na posicao %ld\n", i);
-            achou = 1;
+            achou += 1;
         }
     }
     return achou;

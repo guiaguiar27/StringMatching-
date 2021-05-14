@@ -49,7 +49,7 @@ int BMH(char *Text, char *Pattern, long TextSize, long PatternSize, long *comp, 
         if (j == 0)
         {
             printf("Matching: %ld\n", k+1);
-            frequency = 1;
+            frequency += 1;
         } 
         (*desloc)+= i;
         i += d[Text[i]];
@@ -57,29 +57,5 @@ int BMH(char *Text, char *Pattern, long TextSize, long PatternSize, long *comp, 
     return frequency; 
 
 
-    // long i, j, k, d[MAXCHAR + 1], achou = 0;
-    // for(j = 0; j <= MAXCHAR; j++){
-    //     d[j] = PatternSize + 1;
-    // }
-    // for(j = 1; j <= PatternSize; j++){
-    //     d[Pattern[j-1]] = PatternSize - j +1;
-    // }
-    // i = PatternSize;
-    // while(i <= TextSize){
-    //     k = i;
-    //     j = PatternSize;
-        
-    //     while(Text[k-1] == Pattern[j-1] && j > 0){
-    //         (*comp)++;
-    //         k--;
-    //         j--;
-    //     }
-    //     if(j == 0){
-    //         printf(" - - Casamento na posicao %ld\n", k + 1);
-    //         achou = 1;
-    //     }
-    //     (*desloc)+= i;
-    //     i += d[Text[i]];
-    // }
-    // return achou;
+    
 }
