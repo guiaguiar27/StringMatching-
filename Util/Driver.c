@@ -113,7 +113,16 @@ int Driver()
         printf("\nShift-And:\n");  
         printf("\n\n    * Entre com o valor da distância de edicao: ");   
         scanf("%ld",&k); 
-        printf("\n\n    * Entre com (1) para insercao ou (2) para Remocao ou (3) para Substituição ou (4) para as tres operacoes: "); 
+        printf("\n\n    * Entre com o numero correspondente a operacao que deseja executar:"); 
+        printf("\n\n    (1) Insercao");   
+        printf("\n\n    (2) Remocao"); 
+        printf("\n\n    (3) Substituição");  
+        printf("\n\n    (4) Insercao e remocao"); 
+        printf("\n\n    (5) Insercao e substituicao");  
+        printf("\n\n    (6) Remocao e substituicao");  
+        printf("\n\n    (7) tres operacoes\n");   
+          
+        
         scanf("%hd",&opSA);  
         printf("OP: %hd\n",opSA);
         

@@ -24,24 +24,23 @@ int ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k, short 
         Rnew= ((((unsigned long) Rant) >> 1)| Ri ) & Mask[Text[i] + 127]; 
         R[0] = Rnew;   
         for(j = 1; j <= k; j++){  
-            if(op == 1){  
-                //insercao
+            if(op == 1)
                 Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | Rant ;   
-            }
-            if(op == 2){   
-                //remocaoc
+            if(op == 2)
                 Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | (((unsigned long)Rnew) >> 1);   
-               
-            } 
-            if(op == 3){   
-                // substituicao   
+            if(op == 3)  
                 Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | (((unsigned long)Rant) >> 1);  
-               
-            }
-            if(op == 4){ 
+            if(op == 4)
+                Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | Rant | (((unsigned long)Rnew) >> 1);
+            if(op == 5)
+                Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | Rant | (((unsigned long)Rant) >> 1);
+            if(op == 6) 
+                Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | (((unsigned long)(Rant | Rnew)) >> 1);
+            if(op == 7)
                 Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | Rant | (((unsigned long)(Rant | Rnew)) >> 1);
                 
-            } 
+             
+
             Rant = R[j];
             R[j] = Rnew | Ri; 
            

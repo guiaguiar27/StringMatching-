@@ -10,7 +10,7 @@ void BMH_PreProccessing(long *d, long TextDimension, long PatternDimension, char
     }
     for (int j = 1; j <= PatternDimension; j++)
     {
-        d[Pattern[j - 1]] = PatternDimension - j +1 ;
+        d[Pattern[j - 1]] = PatternDimension - j + 1;
     }
    
 }
@@ -21,12 +21,7 @@ int BMH(char *Text, char *Pattern, long TextSize, long PatternSize, long *comp, 
     BMH_PreProccessing(d,TextSize, PatternSize, Pattern);
     
     
-    // for(j = 0; j <= MAXCHAR; j++){
-    //     d[j] = PatternSize + 1;
-    // }
-    // for(j = 1; j <= PatternSize; j++){
-    //     d[Pattern[j-1]] = PatternSize - j +1;
-    // }
+  
     
     i = PatternSize;
 
@@ -36,11 +31,8 @@ int BMH(char *Text, char *Pattern, long TextSize, long PatternSize, long *comp, 
         j = PatternSize; 
       
         
-        
         while (j > 0 && Pattern[j - 1] == Text[k - 1])
         { 
-
-            //printf("i = %ld | j = %ld | k = %ld | d[Text[%ld]] = %ld \n", i, j, k, i, d[Text[i]]); 
             (*comp)++;
             k--;
             j--;
@@ -51,7 +43,7 @@ int BMH(char *Text, char *Pattern, long TextSize, long PatternSize, long *comp, 
             printf("Matching: %ld\n", k+1);
             frequency += 1;
         } 
-        (*desloc)+= i;
+        (*desloc)+= i; 
         i += d[Text[i]];
     }
     return frequency; 
