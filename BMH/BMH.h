@@ -5,6 +5,5 @@
 #define MAXCHAR 256
 
 /*Functions*/
-long BMH_getTextSize(char *T);
-int BMH_GetPatternSize(char *PString);
-int *BMH_PreProccessing(long TextDimension, long PatternDimension, char *Pattern);
+int *BMH_PreProccessing(long TextDimension, long PatternDimension, char *Pattern); 
+int BMH(char *Text, char *Pattern, long TextSize, long PatternSize, long *comp, long *deslo);
