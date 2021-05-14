@@ -1,7 +1,8 @@
 #include "Driver.h"
 #include "Cadeia.h"
 #include "../ForcaBruta/ForcaBruta.h"
-#include "../BMH/BMH.h"
+#include "../BMH/BMH.h" 
+#include "../ShiftAndAP/ShiftAndAp.h"
 
 //int main(int argc, char* argv[]){
 int Driver()
@@ -11,7 +12,7 @@ int Driver()
     double tempo;
     int op;
     char nome[20];
-    long comp = 0, desloc = 0; 
+    long comp = 0, desloc = 0, k = 0 ; 
     char FileWithPath[50] = "../StringMatching-/Data/"; 
     short flag; 
 
@@ -72,7 +73,7 @@ int Driver()
         break;
     }
     case 2:
-    { //força bruta
+    { //BMH 
         inicio = clock();
         printf("\nBMH:\n");
         if (!BMH(tipoTexto, tipoPadrao, strlen(tipoTexto), strlen(tipoPadrao), &comp, &desloc))
@@ -99,6 +100,36 @@ int Driver()
         }
         break;
         } 
+    case 3: 
+    { 
+         inicio = clock();
+        printf("\nShift-And:\n");  
+        printf("\n\n    * Entre com o valor da distância de edicao: "); 
+        scanf("%ld",&k); 
+        if (!ShiftAndAp(tipoTexto, tipoPadrao, strlen(tipoTexto), strlen(tipoPadrao), k))
+        {
+            printf("\nPadrao nao encontrado\n");
+        }
+
+        fim = clock();
+        total = fim - inicio;
+        tempo = ((double)total) / CLOCKS_PER_SEC;
+        if (tipoPadrao != NULL)
+        {
+            if (flag ==1 )
+            {
+                printf("\n\n    =========================================RESULTADOS=========================================");
+                printf("\n   ||                                                                                             ||");
+                printf("\n   ||  Metodo de casamento exato de cadeias: BMH                                                  ||");
+                printf("\n   ||  Comparacoes entre os caracteres do texto e do padrao: %-7ld                                ||", comp);
+                printf("\n   ||  Deslocamentos realizados na varredura de todo o texto: %-7ld                               ||", desloc);
+                printf("\n   ||  Tempo de execucao do Forca Bruta: %.3f segundos.                                           ||", tempo);
+                printf("\n   ||                                                                                             ||");
+                printf("\n    ============================================================================================\n\n");
+            }
+        }
+        break;
+    } 
     }
         free(tipoTexto);
         free(tipoPadrao);
