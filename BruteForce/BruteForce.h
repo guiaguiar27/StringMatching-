@@ -6,6 +6,6 @@
 
 #include "../Util/Chain.h"
 
-int BruteForce(typeText, long, typePattern, long, long *, long *);
+int BruteForce(typeText text, long textSize, typePattern pattern, long patternSize, long *comp, long *desloc);
 
 #endif
