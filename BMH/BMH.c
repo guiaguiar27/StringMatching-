@@ -80,15 +80,15 @@ int BMH(char *Text, char *Pattern, long TextSize, long PatternSize, long *comp, 
     }
     return frequency;
 }
-int main()
-{
-    char *T = (char *)malloc(sizeof(char));
-    //T = BMH_getString("teste.txt");
-    T = "aabbaabbcdefaabb";
-    long n = BMH_getTextSize(T);
-    char *PString = malloc(sizeof(char));
-    long m = BMH_GetPatternSize(PString);
+// int main()
+// {
+//     char *T = (char *)malloc(sizeof(char));
+//     //T = BMH_getString("teste.txt");
+//     T = "aabbaabbcdefaabb";
+//     long n = BMH_getTextSize(T);
+//     char *PString = malloc(sizeof(char));
+//     long m = BMH_GetPatternSize(PString);
 
-    BMH(T, PString, n, m);
-    return 0;
-}
+//     BMH(T, PString, n, m);
+//     return 0;
+// }

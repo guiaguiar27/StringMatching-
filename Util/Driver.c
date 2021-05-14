@@ -70,7 +70,7 @@ int Driver()
     { //força bruta
         inicio = clock();
         printf("\nBMH:\n");
-        if (!ForcaBruta(tipoTexto, strlen(tipoTexto), tipoPadrao, strlen(tipoPadrao), &comp, &desloc))
+        if (!BMH(tipoTexto, tipoPadrao, strlen(tipoTexto), strlen(tipoPadrao), &comp, &desloc))
         {
             printf("\nPadrao nao encontrado\n");
         }
