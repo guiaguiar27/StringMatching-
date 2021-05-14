@@ -133,8 +133,7 @@ int Driver()
                 printf("\n\n    =========================================RESULTADOS=========================================");
                 printf("\n   ||                                                                                          ||");
                 printf("\n   ||  Metodo de casamento exato de cadeias: Shift-And                                         ||");
-                printf("\n   ||  Distancia de edicao: %ld                                                              ||",k);
-                printf("\n   ||  Deslocamentos realizados na varredura de todo o texto: %-7ld                           ||", desloc); 
+                printf("\n   ||  Distancia de edicao: %ld                                                              ||",k); 
                 printf("\n   ||  Numero de casamentos encontrados varrendo todo o texto: %ld                             ||", Match); 
                 printf("\n   ||  Tempo de execucao do Forca Bruta: %.3f segundos.                                       ||", tempo);
                 printf("\n   ||                                                                                          ||");

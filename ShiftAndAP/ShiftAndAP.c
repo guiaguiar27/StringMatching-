@@ -7,7 +7,7 @@ int ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k, short 
     long  Mask[MAXCHAR], i , j , Ri, Rant, Rnew;  
     long R[MAXCHAR + 1];  
     for(i = 0 ; i < MAXCHAR; i++) 
-        Mask[i] =0 ;  
+        Mask[i] = 0 ;  
     for(i = 1 ; i <= PSize; i++) 
         Mask[Pattern[i+1] + 127] |=1 << (PSize-i); 
     R[0] = 0;  
@@ -19,7 +19,7 @@ int ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k, short 
         Rant = R[0]; 
         Rnew= ((((unsigned long) Rant) >> 1)| Ri ) &Mask[Text[i] + 127]; 
         R[0] = Rnew;   
-        for(j = 1; j <= k ; j++){  
+        for(j = 1; j <= k; j++){  
             if(op == 1){  
                 printf("insercao\n");
                 //insercao
@@ -44,7 +44,11 @@ int ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k, short 
             R[j] = Rnew | Ri; 
         } 
         if((Rnew & 1) != 0){ 
-            printf("Matching: %ld\n", i +1); 
+            printf(" * Matching: %ld\n", i + 1); 
+            for(int ii = 0 ; ii < PSize ;ii++){  
+                ii = i + 1; 
+                printf("%c",Rnew[]);
+            } 
             match +=1;  
         }
     } 
