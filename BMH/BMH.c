@@ -1,38 +1,46 @@
 #include "BMH.h"
 
 
-int *BMH_PreProccessing(long TextDimension, long PatternDimension, char *Pattern)
+void BMH_PreProccessing(long *d, long TextDimension, long PatternDimension, char *Pattern) 
 {
-    int index = 0;
-    int *d = (int *)malloc(MAXCHAR * sizeof(int));
 
-    for (int i = 0; i < MAXCHAR; i++)
+    for (int i = 0; i <= MAXCHAR; i++)
     {
-        d[index] = PatternDimension;
-        index++;
+        d[i] = PatternDimension +1;
     }
-    for (int j = 1; j < PatternDimension; j++)
+    for (int j = 1; j <= PatternDimension; j++)
     {
-        d[Pattern[j - 1]] = PatternDimension - j;
+        d[Pattern[j - 1]] = PatternDimension - j +1 ;
     }
-
-    return d;
+   
 }
 
 int BMH(char *Text, char *Pattern, long TextSize, long PatternSize, long *comp, long *desloc)
 {   
-    long i, j, k;
-    int *d = BMH_PreProccessing(TextSize, PatternSize, Pattern);
+    long i, j, k, d[MAXCHAR + 1],frequency;
+    BMH_PreProccessing(d,TextSize, PatternSize, Pattern);
+    
+    
+    // for(j = 0; j <= MAXCHAR; j++){
+    //     d[j] = PatternSize + 1;
+    // }
+    // for(j = 1; j <= PatternSize; j++){
+    //     d[Pattern[j-1]] = PatternSize - j +1;
+    // }
+    
     i = PatternSize;
-    int frequency = 0;
 
     while (i <= TextSize)
     {
         k = i;
-        j = PatternSize;
+        j = PatternSize; 
+      
+        
+        
         while (j > 0 && Pattern[j - 1] == Text[k - 1])
-        {
-            //printf("i = %ld | j = %ld | k = %ld | d[Text[%ld]] = %d \n", i, j, k, i, d[Text[i]]); 
+        { 
+
+            printf("i = %ld | j = %ld | k = %ld | d[Text[%ld]] = %ld \n", i, j, k, i, d[Text[i]]); 
             (*comp)++;
             k--;
             j--;
