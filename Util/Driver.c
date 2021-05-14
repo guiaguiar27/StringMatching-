@@ -11,7 +11,8 @@ int Driver()
     double tempo;
     int op;
     char nome[20];
-    long comp = 0, desloc = 0;
+    long comp = 0, desloc = 0; 
+    char FileWithPath[50] = "../StringMatching-/Data/";
 
     // if(argc<4 || argc>5){
     //     printf("\nFormato de entrada via linha de comando invalido!\n");
@@ -28,10 +29,11 @@ int Driver()
     printf("\n\n    * Entre com o nome do arquivo de texto a ser analisado (sem .txt): ");
     scanf("%s", nome);
 
-    strcat("/Data/", nome);
+   
     strcat(nome, ".txt"); 
-    printf("Arquivo: %s",nome);
-    tipoTexto = lerTexto(nome); //converte o texto para caracteres
+    strcat(FileWithPath,nome);
+    printf("Arquivo: %s",FileWithPath);
+    tipoTexto = lerTexto(FileWithPath); //converte o texto para caracteres
 
     //padrão a ser pesquisado
 
