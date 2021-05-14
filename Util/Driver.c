@@ -2,7 +2,7 @@
 #include "Cadeia.h"
 #include "../ForcaBruta/ForcaBruta.h"
 #include "../BMH/BMH.h" 
-#include "../ShiftAndAP/ShiftAndAp.h"
+#include "../ShiftAndAP/ShiftAndAP.h"
 
 //int main(int argc, char* argv[]){
 int Driver()
@@ -89,12 +89,12 @@ int Driver()
             if (flag ==1 )
             {
                 printf("\n\n    =========================================RESULTADOS=========================================");
-                printf("\n   ||                                                                                             ||");
-                printf("\n   ||  Metodo de casamento exato de cadeias: BMH                                                  ||");
-                printf("\n   ||  Comparacoes entre os caracteres do texto e do padrao: %-7ld                                ||", comp);
-                printf("\n   ||  Deslocamentos realizados na varredura de todo o texto: %-7ld                               ||", desloc);
-                printf("\n   ||  Tempo de execucao do Forca Bruta: %.3f segundos.                                           ||", tempo);
-                printf("\n   ||                                                                                             ||");
+                printf("\n   ||                                                                                          ||");
+                printf("\n   ||  Metodo de casamento exato de cadeias: BMH                                               ||");
+                printf("\n   ||  Comparacoes entre os caracteres do texto e do padrao: %-7ld                           ||", comp);
+                printf("\n   ||  Deslocamentos realizados na varredura de todo o texto: %-7ld                          ||", desloc);
+                printf("\n   ||  Tempo de execucao do Forca Bruta: %.3f segundos.                                       ||", tempo);
+                printf("\n   ||                                                                                          ||");
                 printf("\n    ============================================================================================\n\n");
             }
         }
@@ -106,7 +106,7 @@ int Driver()
         printf("\nShift-And:\n");  
         printf("\n\n    * Entre com o valor da distância de edicao: "); 
         scanf("%ld",&k); 
-        if (!ShiftAndAp(tipoTexto, tipoPadrao, strlen(tipoTexto), strlen(tipoPadrao), k))
+        if (!ShiftAndAP(tipoTexto, tipoPadrao, strlen(tipoTexto), strlen(tipoPadrao), k))
         {
             printf("\nPadrao nao encontrado\n");
         }
@@ -119,12 +119,12 @@ int Driver()
             if (flag ==1 )
             {
                 printf("\n\n    =========================================RESULTADOS=========================================");
-                printf("\n   ||                                                                                             ||");
-                printf("\n   ||  Metodo de casamento exato de cadeias: BMH                                                  ||");
-                printf("\n   ||  Comparacoes entre os caracteres do texto e do padrao: %-7ld                                ||", comp);
-                printf("\n   ||  Deslocamentos realizados na varredura de todo o texto: %-7ld                               ||", desloc);
-                printf("\n   ||  Tempo de execucao do Forca Bruta: %.3f segundos.                                           ||", tempo);
-                printf("\n   ||                                                                                             ||");
+                printf("\n   ||                                                                                          ||");
+                printf("\n   ||  Metodo de casamento exato de cadeias: Shift-And                                         ||");
+                printf("\n   ||  Distancia de edicao: %ld                                                              ||",k);
+                printf("\n   ||  Deslocamentos realizados na varredura de todo o texto: %-7ld                          ||", desloc);
+                printf("\n   ||  Tempo de execucao do Forca Bruta: %.3f segundos.                                       ||", tempo);
+                printf("\n   ||                                                                                          ||");
                 printf("\n    ============================================================================================\n\n");
             }
         }

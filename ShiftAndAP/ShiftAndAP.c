@@ -1,7 +1,8 @@
-#include "ShiftAndAp.h"
+#include "ShiftAndAP.h"
 
 
-void ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k){ 
+int ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k){  
+    long match = 0; 
     long  Mask[MAXCHAR], i , j , Ri, Rant, Rnew;  
     long R[MAXCHAR + 1];  
     for(i = 0 ; i < MAXCHAR; i++) 
@@ -24,6 +25,8 @@ void ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k){
         } 
         if((Rnew & 1) != 0){ 
             printf("Matching: %ld\n", i +1); 
+            match +=1;  
         }
-    }
+    } 
+    return match; 
 }

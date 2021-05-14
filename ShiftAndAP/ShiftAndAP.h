@@ -4,6 +4,6 @@
 #include "../Util/Cadeia.h"
 #define MAXCHAR 256 
 
-void ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k);
+int ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k);
 
 /*Functions*/ 
