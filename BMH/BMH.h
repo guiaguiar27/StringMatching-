@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../Util/Cadeia.h"
+#include "../Util/Chain.h"
 #define MAXCHAR 256
 
 /*Functions*/ 

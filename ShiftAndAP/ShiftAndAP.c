@@ -5,7 +5,7 @@ int ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k, short 
     
     long match = 0; 
     long  Mask[MAXCHAR], i , j , Ri, Rant, Rnew;  
-    long R[NUMMAXERROS + 1];  
+    long R[NUMMAXERRORS + 1];  
     for(i = 0 ; i < MAXCHAR; i++) 
     {
         Mask[i] = 0 ;   
@@ -38,13 +38,12 @@ int ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k, short 
                 Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | (((unsigned long)(Rant | Rnew)) >> 1);
             if(op == 7)
                 Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | Rant | (((unsigned long)(Rant | Rnew)) >> 1);
-                
              
-
             Rant = R[j];
             R[j] = Rnew | Ri; 
            
         } 
+
         if((Rnew & 1) != 0){ 
             printf("* Matching: %ld", i + 1); 
             for(int l = PSize ; l < 0 ;l--){  
@@ -56,8 +55,5 @@ int ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k, short 
             match +=1;  
         }
     } 
-    return match; 
-
-
-   
+    return match;    
 }

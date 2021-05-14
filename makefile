@@ -1,5 +1,5 @@
 all:
-	gcc main.c Util/Driver.c Util/Cadeia.c ForcaBruta/ForcaBruta.c BMH/BMH.c ShiftAndAP/ShiftAndAP.c -o main
+	gcc main.c Util/Driver.c Util/Chain.c BruteForce/BruteForce.c BMH/BMH.c ShiftAndAP/ShiftAndAP.c -o main
 execute:
 	./main
 clean:
