@@ -1,13 +1,14 @@
 #include "ShiftAndAP.h"
 
 
-int ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k, short op){  
+int ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k, short op){   
+    printf("Entrou aqui\n");
     long match = 0; 
     long  Mask[MAXCHAR], i , j , Ri, Rant, Rnew;  
     long R[MAXCHAR + 1];  
     for(i = 0 ; i < MAXCHAR; i++) 
         Mask[i] =0 ;  
-    for(i = 0 ; i <= PSize; i++) 
+    for(i = 1 ; i <= PSize; i++) 
         Mask[Pattern[i+1] + 127] |=1 << (PSize-i); 
     R[0] = 0;  
     Ri = 1 << (PSize -1); 
@@ -19,16 +20,26 @@ int ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k, short 
         Rnew= ((((unsigned long) Rant) >> 1)| Ri ) &Mask[Text[i] + 127]; 
         R[0] = Rnew;   
         for(j = 1; j <= k ; j++){  
-            if(op == 1) 
+            if(op == 1){  
+                printf("insercao\n");
                 //insercao
-                Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | Rant ;  
-            else if(op == 2)  
+                Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | Rant ;   
+            }
+            if(op == 2){   
+                printf("remocao\n");
                 //remocao
+                Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | (((unsigned long)Rnew) >> 1);  
+            } 
+            if(op == 3){   
+                printf("substituicao\n");
+                // substituicao   
                 Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | (((unsigned long)Rant) >> 1);  
-            else if(op == 3) 
-                // substituicao  
-                Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | (((unsigned long)Rnew) >> 1);
-
+              
+            }
+            if(op == 4){ 
+                printf("Todas as operacoes\n");
+                Rnew = ((((unsigned long)R[j]) >> 1) & Mask[Text[i] + 127]) | Rant | (((unsigned long)(Rant | Rnew)) >> 1);
+            }
             Rant = R[j];
             R[j] = Rnew | Ri; 
         } 
@@ -38,4 +49,7 @@ int ShiftAndAP(char *Text, char *Pattern, long TSize, long PSize, long k, short 
         }
     } 
     return match; 
+
+
+   
 }

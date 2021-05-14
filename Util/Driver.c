@@ -113,8 +113,9 @@ int Driver()
         printf("\nShift-And:\n");  
         printf("\n\n    * Entre com o valor da distância de edicao: ");   
         scanf("%ld",&k); 
-        printf("\n\n    * Entre com (1) para insercao ou (2) para Remocao ou (3) para Substituição: "); 
-        scanf("%hd",&opSA); 
+        printf("\n\n    * Entre com (1) para insercao ou (2) para Remocao ou (3) para Substituição ou (4) para as tres operacoes: "); 
+        scanf("%hd",&opSA);  
+        printf("OP: %hd\n",opSA);
         
         Match = ShiftAndAP(tipoTexto, tipoPadrao, strlen(tipoTexto), strlen(tipoPadrao), k,opSA);
         if (Match <= 0)
