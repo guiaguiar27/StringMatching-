@@ -12,7 +12,8 @@ int Driver()
     int op;
     char nome[20];
     long comp = 0, desloc = 0; 
-    char FileWithPath[50] = "../StringMatching-/Data/";
+    char FileWithPath[50] = "../StringMatching-/Data/"; 
+    short flag; 
 
     // if(argc<4 || argc>5){
     //     printf("\nFormato de entrada via linha de comando invalido!\n");
@@ -27,7 +28,9 @@ int Driver()
     printf("\n\n    * Entre com (1) para utilizar forca bruta - (2) para utilizar BMH: ");
     scanf("%d", &op);
     printf("\n\n    * Entre com o nome do arquivo de texto a ser analisado (sem .txt): ");
-    scanf("%s", nome);
+    scanf("%s", nome); 
+    printf("\n\n    * Entre com (1) para analisar as metricas - (0) para esconde-las: "); 
+    scanf("%hd",&flag);
 
    
     strcat(nome, ".txt"); 
@@ -54,7 +57,7 @@ int Driver()
         tempo = ((double)total) / CLOCKS_PER_SEC;
         if (tipoPadrao != NULL)
         {
-            if (strcmp(tipoPadrao, "-P") == 0 || strcmp(tipoPadrao, "-p") == 0)
+            if (flag ==1 )
             {
                 printf("\n\n    =========================================RESULTADOS=========================================");
                 printf("\n   ||                                                                                          ||");
@@ -82,15 +85,15 @@ int Driver()
         tempo = ((double)total) / CLOCKS_PER_SEC;
         if (tipoPadrao != NULL)
         {
-            if (strcmp(tipoPadrao, "-P") == 0 || strcmp(tipoPadrao, "-p") == 0)
+            if (flag ==1 )
             {
                 printf("\n\n    =========================================RESULTADOS=========================================");
-                printf("\n   ||                                                                                          ||");
-                printf("\n   ||  Metodo de casamento exato de cadeias: BMH                                       ||");
-                printf("\n   ||  Comparacoes entre os caracteres do texto e do padrao: %-7ld                           ||", comp);
-                printf("\n   ||  Deslocamentos realizados na varredura de todo o texto: %-7ld                          ||", desloc);
-                printf("\n   ||  Tempo de execucao do Forca Bruta: %.3f segundos.                                       ||", tempo);
-                printf("\n   ||                                                                                          ||");
+                printf("\n   ||                                                                                             ||");
+                printf("\n   ||  Metodo de casamento exato de cadeias: BMH                                                  ||");
+                printf("\n   ||  Comparacoes entre os caracteres do texto e do padrao: %-7ld                                ||", comp);
+                printf("\n   ||  Deslocamentos realizados na varredura de todo o texto: %-7ld                               ||", desloc);
+                printf("\n   ||  Tempo de execucao do Forca Bruta: %.3f segundos.                                           ||", tempo);
+                printf("\n   ||                                                                                             ||");
                 printf("\n    ============================================================================================\n\n");
             }
         }
