@@ -1,0 +1,131 @@
+ 
+ RandomDNA
+ =========================================RESULTADOS=========================================
+      gagcat                                                                                       
+     Metodo de casamento exato de Cadeias: BMH                                               
+     Comparacoes entre os caracteres do texto e do padrao: 240421                            
+     Deslocamentos realizados na varredura de todo o texto: 202953890088                          
+     Numero de casamentos encontrados varrendo todo o texto: 216                           
+     Tempo de execucao do BMH: 0.012 segundos.                                       
+                                                                                             
+    ============================================================================================ 
+
+      =========================================RESULTADOS=========================================
+          tgataca                                                                                    
+     Metodo de casamento exato de Cadeias: BMH                                               
+     Comparacoes entre os caracteres do texto e do padrao: 188167                            
+     Deslocamentos realizados na varredura de todo o texto: 157638743517                          
+     Numero de casamentos encontrados varrendo todo o texto: 65                           
+     Tempo de execucao do BMH: 0.008 segundos.                                               
+                                                                                             
+    ============================================================================================
+  
+
+    =========================================RESULTADOS=========================================
+                                            tttc                                                 
+     Metodo de casamento exato de Cadeias: BMH                                               
+     Comparacoes entre os caracteres do texto e do padrao: 193415                            
+     Deslocamentos realizados na varredura de todo o texto: 161970400506                          
+     Numero de casamentos encontrados varrendo todo o texto: 3715                           
+     Tempo de execucao do BMH: 0.025 segundos.                                               
+                                                                                             
+    ============================================================================================ 
+
+     =========================================RESULTADOS=========================================
+                                    ava                                                                                                                                                       
+     PADRAO NAO ENCONTRADO                                                                    
+     Metodo de casamento exato de Cadeias: BMH                                               
+     Comparacoes entre os caracteres do texto e do padrao: 134887                            
+     Deslocamentos realizados na varredura de todo o texto: 163375238535                          
+     Numero de casamentos encontrados varrendo todo o texto: 0                           
+     Tempo de execucao do BMH: 0.006 segundos.                                               
+
+    ============================================================================================ 
+
+
+
+    RandomDNA2  
+
+    =========================================RESULTADOS=========================================
+                                      aa                                                         
+     Metodo de casamento exato de Cadeias: BMH                                               
+     Comparacoes entre os caracteres do texto e do padrao: 2222                              
+     Deslocamentos realizados na varredura de todo o texto: 21533211                          
+     Numero de casamentos encontrados varrendo todo o texto: 559                           
+     Tempo de execucao do BMH: 0.002 segundos.                                               
+                                                                                             
+    ============================================================================================ 
+
+
+    =========================================RESULTADOS=========================================
+                                             tt                                                 
+     Metodo de casamento exato de Cadeias: BMH                                               
+     Comparacoes entre os caracteres do texto e do padrao: 2389                              
+     Deslocamentos realizados na varredura de todo o texto: 21594101                          
+     Numero de casamentos encontrados varrendo todo o texto: 619                           
+     Tempo de execucao do BMH: 0.003 segundos.                                               
+                                                                                             
+    ============================================================================================ 
+
+     =========================================RESULTADOS=========================================
+                                        tta                                                     
+     Metodo de casamento exato de Cadeias: BMH                                               
+     Comparacoes entre os caracteres do texto e do padrao: 2214                              
+     Deslocamentos realizados na varredura de todo o texto: 19296677                          
+     Numero de casamentos encontrados varrendo todo o texto: 156                           
+     Tempo de execucao do BMH: 0.001 segundos.                                               
+                                                                                             
+    ============================================================================================ 
+
+
+    =========================================RESULTADOS=========================================
+                                           tca                                                   
+     Metodo de casamento exato de Cadeias: BMH                                               
+     Comparacoes entre os caracteres do texto e do padrao: 2341                              
+     Deslocamentos realizados na varredura de todo o texto: 21279236                          
+     Numero de casamentos encontrados varrendo todo o texto: 150                           
+     Tempo de execucao do BMH: 0.001 segundos.                                               
+                                                                                             
+    ============================================================================================ 
+
+RandomDNA3 
+=========================================RESULTADOS=========================================
+                              gagcat                                                               
+     Metodo de casamento exato de Cadeias: BMH                                               
+     Comparacoes entre os caracteres do texto e do padrao: 2401183                           
+     Deslocamentos realizados na varredura de todo o texto: 20279160764683                          
+     Numero de casamentos encontrados varrendo todo o texto: 2209                           
+     Tempo de execucao do BMH: 0.118 segundos.                                               
+                                                                                             
+============================================================================================ 
+
+=========================================RESULTADOS=========================================
+                          tgataca                                                                   
+     Metodo de casamento exato de Cadeias: BMH                                               
+     Comparacoes entre os caracteres do texto e do padrao: 1886046                           
+     Deslocamentos realizados na varredura de todo o texto: 15751514514345                          
+     Numero de casamentos encontrados varrendo todo o texto: 589                           
+     Tempo de execucao do BMH: 0.085 segundos.                                               
+                                                                                             
+    ============================================================================================
+
+   =========================================RESULTADOS=========================================
+                                    tttc                                                         
+     Metodo de casamento exato de Cadeias: BMH                                               
+     Comparacoes entre os caracteres do texto e do padrao: 1925777                           
+     Deslocamentos realizados na varredura de todo o texto: 16175994809797                          
+     Numero de casamentos encontrados varrendo todo o texto: 37125                           
+     Tempo de execucao do BMH: 0.245 segundos.                                               
+                                                                                             
+    ============================================================================================ 
+
+    =========================================RESULTADOS=========================================
+                                        ava                                                     
+     PADRAO NAO ENCONTRADO                                                                   
+     Metodo de casamento exato de Cadeias: BMH                                               
+     Comparacoes entre os caracteres do texto e do padrao: 1346613                           
+     Deslocamentos realizados na varredura de todo o texto: 16323288012202                          
+     Numero de casamentos encontrados varrendo todo o texto: 0                           
+     Tempo de execucao do BMH: 0.061 segundos.                                               
+                                                                                             
+    ============================================================================================ 

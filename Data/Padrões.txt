@@ -1,0 +1,17 @@
+RandomDNA
+gagcat 
+tgataca 
+tttc 
+ava 
+
+RandomDNA2  
+aa  
+tt 
+tta
+tca 
+
+RandomDNA3 
+gagcat 
+tgataca 
+tttc 
+ava 

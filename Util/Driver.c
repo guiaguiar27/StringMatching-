@@ -14,7 +14,7 @@ int Driver()
     char nome[20];
     long comp = 0, desloc = 0, k = 0 ; 
     char FileWithPath[50] = "../StringMatching-/Data/";  
-    long Match = 0; 
+    long Match = 0;  
     short flag = 0, opSA;     
 
 
@@ -41,57 +41,50 @@ int Driver()
         begin = clock();
         printf("\nMetodo Forca Bruta:\n"); 
         Match = BruteForce(typeText, strlen(typeText), typePattern, strlen(typePattern), &comp, &desloc);
-        if (Match <= 0)
-        {
-            printf("\nPadrao nao encontrado\n");
-        }
+        
 
         end = clock();
         total = end - begin;
         time = ((double)total) / CLOCKS_PER_SEC;
-        if (typePattern != NULL && Match > 0)
-        {
-            if (flag ==1 )
+        if (flag ==1 )
             {
-                printf("\n\n    =========================================RESULTADOS=========================================");
-                printf("\n   ||                                                                                          ||");
-                printf("\n   ||  Metodo de casamento exato de Cadeias: Forca Bruta                                       ||");
-                printf("\n   ||  Comparacoes entre os caracteres do texto e do padrao: %-7ld                           ||", comp);
-                printf("\n   ||  Deslocamentos realizados na varredura de todo o texto: %-7ld                          ||", desloc); 
-                printf("\n   ||  Numero de casamentos encontrados varrendo todo o texto: %ld                           ||", Match); 
-                printf("\n   ||  Tempo de execucao do Forca Bruta: %.3f segundos.                                       ||", time);
-                printf("\n   ||                                                                                          ||");
+                printf("\n\n    =========================================RESULTADOS========================================="); 
+                if(Match <= 0 ) 
+                    printf("\n     PADRAO NAO ENCONTRADO                                                                   ");
+                printf("\n     Metodo de casamento exato de Cadeias: Forca Bruta                                       ");
+                printf("\n     Comparacoes entre os caracteres do texto e do padrao: %-7ld                           ", comp);
+                printf("\n     Deslocamentos realizados na varredura de todo o texto: %-7ld                          ", desloc); 
+                printf("\n     Numero de casamentos encontrados varrendo todo o texto: %ld                           ", Match); 
+                printf("\n     Tempo de execucao do Forca Bruta: %.3f segundos.                                       ", time);
+                printf("\n                                                                                             ");
                 printf("\n    ============================================================================================\n\n");
             }
-        }
+        
         break;
     }
     case 2:
     { //BMH 
         begin = clock();
         printf("\nBMH:\n");  
-        
+        Match = 0 ; 
         Match = BMH(typeText, typePattern, strlen(typeText), strlen(typePattern), &comp, &desloc); 
-        if (Match <= 0)
-        {
-            printf("\nPadrao nao encontrado\n");
-        }
-
         end = clock();
         total = end - begin;
         time = ((double)total) / CLOCKS_PER_SEC;
-        if (typePattern != NULL && Match > 0)
+        if (typePattern != NULL)
         {
             if (flag == 1)
             {
                 printf("\n\n    =========================================RESULTADOS=========================================");
-                printf("\n   ||                                                                                          ||");
-                printf("\n   ||  Metodo de casamento exato de Cadeias: BMH                                               ||");
-                printf("\n   ||  Comparacoes entre os caracteres do texto e do padrao: %-7ld                           ||", comp); 
-                printf("\n   ||  Deslocamentos realizados na varredura de todo o texto: %-7ld                          ||", desloc);  
-                printf("\n   ||  Numero de casamentos encontrados varrendo todo o texto: %ld                           ||", Match); 
-                printf("\n   ||  Tempo de execucao do BMH: %.3f segundos.                                       ||", time); 
-                printf("\n   ||                                                                                          ||");
+                printf("\n                                                                                             ");
+                if(Match <= 0 ) 
+                    printf("\n     PADRAO NAO ENCONTRADO                                                                   ");
+                printf("\n     Metodo de casamento exato de Cadeias: BMH                                               ");
+                printf("\n     Comparacoes entre os caracteres do texto e do padrao: %-7ld                           ", comp); 
+                printf("\n     Deslocamentos realizados na varredura de todo o texto: %-7ld                          ", desloc);  
+                printf("\n     Numero de casamentos encontrados varrendo todo o texto: %ld                           ", Match); 
+                printf("\n     Tempo de execucao do BMH: %.3f segundos.                                               ", time); 
+                printf("\n                                                                                             ");
                 printf("\n    ============================================================================================\n\n");
             }
         } 
@@ -118,28 +111,24 @@ int Driver()
         printf("OP: %hd\n",opSA);
         
         Match = ShiftAndAP(typeText, typePattern, strlen(typeText), strlen(typePattern), k,opSA);
-        if (Match <= 0)
-        {
-            printf("\nPadrao nao encontrado\n");
-        }
-
+       
         end = clock();
         total = end - begin;
         time = ((double)total) / CLOCKS_PER_SEC;
-        if (typePattern != NULL && Match > 0)
-        {
-            if (flag ==1 )
+        if (flag ==1 )
             {
                 printf("\n\n    =========================================RESULTADOS=========================================");
-                printf("\n   ||                                                                                          ||");
-                printf("\n   ||  Metodo de casamento aproximado de Cadeias(Shift-And):                                         ||");
-                printf("\n   ||  Distancia de edicao: %ld                                                              ||",k); 
-                printf("\n   ||  Numero de casamentos encontrados varrendo todo o texto: %ld                           ||", Match); 
-                printf("\n   ||  Tempo de execucao do Forca Bruta: %.3f segundos.                                       ||", time);
-                printf("\n   ||                                                                                          ||");
+                printf("\n                                                                                             "); 
+                if(Match <= 0 ) 
+                    printf("\n     PADRAO NAO ENCONTRADO                                                                   ");
+                printf("\n     Metodo de casamento aproximado de Cadeias(Shift-And):                                   ");
+                printf("\n     Distancia de edicao: %ld                                                              ",k); 
+                printf("\n     Numero de casamentos encontrados varrendo todo o texto: %ld                           ", Match); 
+                printf("\n     Tempo de execucao do Forca Bruta: %.3f segundos.                                       ", time);
+                printf("\n                                                                                             ");
                 printf("\n    ============================================================================================\n\n");
             }
-        }
+        
         break;
     } 
     }

@@ -1,0 +1,129 @@
+RandomDNA
+    =========================================RESULTADOS=========================================
+                                gagcat
+        Metodo de casamento exato de Cadeias: Forca Bruta                                       
+        Comparacoes entre os caracteres do texto e do padrao: 1364184                           
+        Deslocamentos realizados na varredura de todo o texto: 1364184                          
+        Numero de casamentos encontrados varrendo todo o texto: 216                           
+        Tempo de execucao do Forca Bruta: 0.020 segundos.                                       
+                                                                                                
+    ============================================================================================ 
+
+
+    =========================================RESULTADOS=========================================
+        tgataca
+     Metodo de casamento exato de Cadeias: Forca Bruta                                       
+     Comparacoes entre os caracteres do texto e do padrao: 1365834                           
+     Deslocamentos realizados na varredura de todo o texto: 1365834                          
+     Numero de casamentos encontrados varrendo todo o texto: 65                           
+     Tempo de execucao do Forca Bruta: 0.017 segundos.                                       
+                                                                                             
+    ============================================================================================  
+
+    =========================================RESULTADOS========================================= 
+                tttc
+     Metodo de casamento exato de Cadeias: Forca Bruta                                       
+     Comparacoes entre os caracteres do texto e do padrao: 1364719                           
+     Deslocamentos realizados na varredura de todo o texto: 1364719                          
+     Numero de casamentos encontrados varrendo todo o texto: 3715                           
+     Tempo de execucao do Forca Bruta: 0.037 segundos.                                       
+                                                                                             
+    ============================================================================================   
+
+     =========================================RESULTADOS=========================================
+                                  ava                                                           
+     PADRAO NAO ENCONTRADO                                                                   
+     Metodo de casamento exato de Cadeias: BMH                                               
+     Comparacoes entre os caracteres do texto e do padrao: 134887                            
+     Deslocamentos realizados na varredura de todo o texto: 163375238535                          
+     Numero de casamentos encontrados varrendo todo o texto: 0                           
+     Tempo de execucao do Forca Bruta: 0.006 segundos.                                               
+                                                                                             
+    ============================================================================================ 
+
+    RandomDNA2 
+
+     =========================================RESULTADOS========================================= 
+                    aa
+     Metodo de casamento exato de Cadeias: Forca Bruta                                       
+     Comparacoes entre os caracteres do texto e do padrao: 13368                             
+     Deslocamentos realizados na varredura de todo o texto: 13368                            
+     Numero de casamentos encontrados varrendo todo o texto: 559                           
+     Tempo de execucao do Forca Bruta: 0.003 segundos.                                       
+                                                                                             
+    ============================================================================================  
+
+      =========================================RESULTADOS========================================= 
+                tt
+     Metodo de casamento exato de Cadeias: Forca Bruta                                       
+     Comparacoes entre os caracteres do texto e do padrao: 13589                             
+     Deslocamentos realizados na varredura de todo o texto: 13589                            
+     Numero de casamentos encontrados varrendo todo o texto: 619                           
+     Tempo de execucao do Forca Bruta: 0.003 segundos.                                       
+                                                                                             
+    ============================================================================================ 
+
+    =========================================RESULTADOS========================================= 
+                tta
+     Metodo de casamento exato de Cadeias: Forca Bruta                                       
+     Comparacoes entre os caracteres do texto e do padrao: 13744                             
+     Deslocamentos realizados na varredura de todo o texto: 13744                            
+     Numero de casamentos encontrados varrendo todo o texto: 156                           
+     Tempo de execucao do Forca Bruta: 0.001 segundos.                                       
+                                                                                             
+    ============================================================================================
+
+
+    =========================================RESULTADOS=========================================
+                 tca
+     Metodo de casamento exato de Cadeias: Forca Bruta                                       
+     Comparacoes entre os caracteres do texto e do padrao: 13778                             
+     Deslocamentos realizados na varredura de todo o texto: 13778                            
+     Numero de casamentos encontrados varrendo todo o texto: 150                           
+     Tempo de execucao do Forca Bruta: 0.001 segundos.                                       
+                                                                                             
+    ============================================================================================
+
+RandomDNA3 
+
+    =========================================RESULTADOS========================================= 
+                gagcat
+     Metodo de casamento exato de Cadeias: Forca Bruta                                       
+     Comparacoes entre os caracteres do texto e do padrao: 13644612                           
+     Deslocamentos realizados na varredura de todo o texto: 13644612                          
+     Numero de casamentos encontrados varrendo todo o texto: 2209                           
+     Tempo de execucao do Forca Bruta: 0.184 segundos.                                       
+                                                                                             
+    ============================================================================================ 
+
+
+
+    =========================================RESULTADOS=========================================
+     Metodo de casamento exato de Cadeias: Forca Bruta                                       
+     Comparacoes entre os caracteres do texto e do padrao: 13645879                           
+     Deslocamentos realizados na varredura de todo o texto: 13645879                          
+     Numero de casamentos encontrados varrendo todo o texto: 589                           
+     Tempo de execucao do Forca Bruta: 0.170 segundos.                                       
+                                                                                             
+    ============================================================================================
+
+    =========================================RESULTADOS=========================================
+             tttc
+     Metodo de casamento exato de Cadeias: Forca Bruta                                       
+     Comparacoes entre os caracteres do texto e do padrao: 13636314                           
+     Deslocamentos realizados na varredura de todo o texto: 13636314                          
+     Numero de casamentos encontrados varrendo todo o texto: 37125                           
+     Tempo de execucao do Forca Bruta: 0.339 segundos.                                       
+                                                                                             
+    ============================================================================================ 
+
+      =========================================RESULTADOS=========================================
+                ava 
+     PADRAO NAO ENCONTRADO                                                                   
+     Metodo de casamento exato de Cadeias: Forca Bruta                                       
+     Comparacoes entre os caracteres do texto e do padrao: 12834149                           
+     Deslocamentos realizados na varredura de todo o texto: 12834149                          
+     Numero de casamentos encontrados varrendo todo o texto: 0                           
+     Tempo de execucao do Forca Bruta: 0.111 segundos.                                       
+                                                                                             
+    ============================================================================================

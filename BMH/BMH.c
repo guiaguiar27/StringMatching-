@@ -17,7 +17,7 @@ void BMH_PreProccessing(long *d, long TextDimension, long PatternDimension, char
 
 int BMH(char *Text, char *Pattern, long TextSize, long PatternSize, long *comp, long *desloc)
 {   
-    long i, j, k, d[MAXCHAR + 1],frequency;
+    long i, j, k, d[MAXCHAR + 1],frequency = 0 ;
     BMH_PreProccessing(d,TextSize, PatternSize, Pattern);
     
     
